@@ -4,14 +4,14 @@ import random
 card_values = [11,2,3,4,5,6,7,8,9,10,10,10,10]
 user_values =[]
 comp_values =[]
-random_num = random.choice(card_values)
-user_values.append(random_num)
-random_num = random.choice(card_values)
-user_values.append(random_num)
-random_num = random.choice(card_values)
-comp_values.append(random_num)
-random_num = random.choice(card_values)
-comp_values.append(random_num)
+def deal_card():
+    random_num = random.choice(card_values)
+    return random_num
+
+user_values.append(deal_card())
+user_values.append(deal_card())
+comp_values.append(deal_card())
+comp_values.append(deal_card())
 
 print(f"your values are {user_values} and sum is {sum(user_values)}")
 print(f"Comp values are {comp_values[0]} and sum is {sum(comp_values)}")
