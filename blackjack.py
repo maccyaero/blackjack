@@ -7,11 +7,9 @@ comp_values =[]
 def deal_card():
     random_num = random.choice(card_values)
     return random_num
-
-user_values.append(deal_card())
-user_values.append(deal_card())
-comp_values.append(deal_card())
-comp_values.append(deal_card())
+for _ in range(2):
+    user_values.append(deal_card())
+    comp_values.append(deal_card())
 
 print(f"your values are {user_values} and sum is {sum(user_values)}")
 print(f"Comp values are {comp_values[0]} and sum is {sum(comp_values)}")
